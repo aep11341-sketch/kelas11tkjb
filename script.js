@@ -1,6 +1,6 @@
 /* Students Data */
 let students = [
-  "Aldi Ramadhan","Bagas Pratama","Cahya Nugraha","Dewi Anggraini","Eka Saputra",
+  "Saepudin","Andy Pratama","Risky Anugrah","Yunus Maulana","Dimas Andrean",
   "Fajar Maulana","Gita Ayu","Hendra Kurnia","Irfan Maulana","Jihan Salsabila",
   "Kiki Putra","Laras Pertiwi","Mohammad Rizky","Nadia Lutfiah","Oki Andrian",
   "Putri Salsabila","Rian Hidayat","Sinta Wulandari","Tegar Prasetyo","Ulfa Dwi",
