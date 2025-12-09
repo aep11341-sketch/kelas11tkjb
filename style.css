@@ -1,0 +1,114 @@
+:root{
+  --bg: #121417;        /* deep dark */
+  --card: #181A1D;      /* panel */
+  --accent: #7FA8D9;    /* pastel blue-gray */
+  --accent-2: #7FE4D0;  /* soft aqua (tidak banyak) */
+  --muted: #BFC6CF;
+  --text: #E9EEF2;
+}
+
+/* Basic reset */
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ height:100%; }
+body{
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* layout helpers */
+.container{ width: min(1100px, 94%); margin: 0 auto; }
+
+/* Header */
+.site-header{ position:sticky; top:0; z-index:40; background: rgba(18,20,23,0.6); backdrop-filter: blur(6px); border-bottom:1px solid rgba(127,168,217,0.06); }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+
+/* Logo */
+.logo{ display:flex; gap:12px; align-items:center; text-decoration:none; color:var(--text); }
+.logo-svg{ flex:0 0 54px; }
+.logo-text .title{ font-weight:700; color:var(--accent); letter-spacing:0.2px; }
+.logo-text .tag{ font-size:12px; color:var(--muted); margin-top:2px; }
+
+/* Nav */
+.nav a{ color:var(--muted); margin-left:18px; text-decoration:none; font-weight:500; transition:all .18s ease; }
+.nav a:hover{ color:var(--accent-2); transform:translateY(-2px); }
+
+/* HERO */
+.hero{ min-height:64vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:80px 0; background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); }
+.hero-inner h1{ font-size:38px; color:var(--accent); margin-bottom:10px; }
+.lead{ color:var(--muted); margin-bottom:16px; font-size:1.05rem; }
+.btn{
+  display:inline-block; background:linear-gradient(90deg, var(--accent-2), var(--accent)); color:#07121a;
+  padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:600;
+  box-shadow: 0 6px 18px rgba(127,168,217,0.06);
+}
+
+/* Sections */
+.section{ padding:36px 0; }
+.section.dark{ background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); }
+
+/* Card */
+.card{ background:var(--card); padding:20px; border-radius:10px; border:1px solid rgba(255,255,255,0.02); }
+
+/* Students grid */
+.grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:16px; margin-top:18px; }
+.student{
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), transparent);
+  border-radius:10px; padding:18px; text-align:center; border:1px solid rgba(255,255,255,0.02);
+}
+.student .avatar{
+  width:72px; height:72px; border-radius:50%; margin:0 auto 10px; background:linear-gradient(120deg, rgba(127,168,217,0.12), rgba(127,168,217,0.06));
+  display:flex; align-items:center; justify-content:center; color:var(--accent); font-weight:700;
+}
+.student .name{ font-weight:600; color:var(--text); }
+
+/* Gallery */
+.gallery-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-top:14px; }
+.photo{ height:120px; border-radius:8px; background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); display:flex; align-items:center; justify-content:center; color:var(--muted); }
+
+/* Footer */
+.site-footer{ padding:18px 0; text-align:center; color:var(--muted); font-size:13px; }
+
+/* Responsive */
+@media (max-width:700px){
+  .header-inner{ flex-direction:column; gap:10px; padding:12px 0; }
+  .logo-text .title{ font-size:16px; }
+  .nav{ display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+  .gallery-grid{ grid-template-columns: repeat(2,1fr); }
+}
+.admin-control{
+  display:flex;
+  gap:10px;
+  margin-bottom:12px;
+}
+.admin-control input{
+  flex:1;
+  background:#101114;
+  border:1px solid rgba(255,255,255,0.08);
+  padding:10px;
+  border-radius:6px;
+  color:var(--text);
+}
+#admin-list{
+  list-style:none;
+  margin-top:12px;
+}
+#admin-list li{
+  display:flex;
+  justify-content:space-between;
+  padding:8px 10px;
+  margin-bottom:6px;
+  background:rgba(255,255,255,0.02);
+  border-radius:6px;
+}
+#admin-list button{
+  background:none;
+  border:1px solid var(--accent);
+  color:var(--accent-2);
+  padding:4px 8px;
+  border-radius:4px;
+  cursor:pointer;
+}
